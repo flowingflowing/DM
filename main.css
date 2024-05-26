@@ -59,13 +59,17 @@ body{
     max-width: 600px;
 }
 .input_content{
+    width: 280px;
+    height: 130px;
     margin: auto;
-    padding: 0px 50px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    line-height: 170%;
     font-family: 'NanumBarunGothic';
 }
 input{
     width: 150px;
-    height: 17px;
+    height: 20px;
     font-size: smaller;
     font-family: 'NanumBarunGothic';
     text-align: center;
