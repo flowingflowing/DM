@@ -41,4 +41,34 @@ headbar {
 body{
     background-color: #D6D0E4;
     margin: 0;
+    max-width: 600px;
+}
+
+.flex-cont-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+}
+.flex-cont-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+}
+.input_content{
+    margin: auto;
+    padding: 0px 50px;
+    font-family: 'NanumBarunGothic';
+}
+input{
+    width: 150px;
+    height: 17px;
+    font-size: smaller;
+    font-family: 'NanumBarunGothic';
+    text-align: center;
+    border: 0px;
+    border-radius: 5px;
 }
