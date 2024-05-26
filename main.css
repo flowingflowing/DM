@@ -26,5 +26,19 @@
 headbar {
     font-family: 'RixInooAriDuriR';
     text-align: left;
-    margin-left: 1.4cm;
+    color: white;
+    position: absolute;
+    margin-top: 18px;
+}
+
+.head-logo {
+    height: 50px;
+    position: relative;
+    background-color: #D6D0E4;
+    box-shadow: 0px 3.5px 5px #BCB1D3;
+}
+
+body{
+    background-color: #D6D0E4;
+    margin: 0;
 }
