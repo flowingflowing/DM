@@ -23,10 +23,24 @@
       <sb>절대 갇혀있는 게 아닙니다 하하</sb>
     </div>
   </div>
-
-  <div id = "bodybody">
-    여기에 정보를 받아오고 싶음
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <div class="menubar">
+    <button class="mButton0" id="proBtn" type="button" onclick="changeByPro()">프로필</button>
+    <button id="ideBtn" type="button" onclick="changeByIde()">이상형</button>
   </div>
-  <script src="profile.js"></script>
+  <script>
+    $( document ).ready( function() {
+      $( '#proBtn' ).click( function() {
+        $('#proBtn').addClass('mButton0');
+        $('#ideBtn').removeClass('mButton0');
+      } );
+    } );
+    $( document ).ready( function() {
+      $( '#ideBtn' ).click( function() {
+        $('#ideBtn').addClass('mButton0');
+        $('#proBtn').removeClass('mButton0');
+      } );
+    } );
+  </script>
 </body>
 </html>
