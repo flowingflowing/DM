@@ -5,9 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="main.css">
   <title>DailyMate</title>
-  <style>
-    /* CSS 스타일을 여기에 작성합니다. */
-  </style>
+  <script>
+    function sendForm(){
+        console.dir(ck);
+        var id = ck.form[0];
+        var pw = ck.form[1];
+
+        if(id.value == ''){
+                id.focus();
+                return ;
+        }else if(pw.value == ''){
+            pw.focus();
+            return ;
+        }
+
+        ck.form.action="profile.html";
+        ck.form.method="post";
+        ck.form.submit();
+    }
+  </script>
 </head>
 <body>
   <div class="head-logo">
@@ -19,7 +35,10 @@
         <p>
             <label>id<br/><input name="id" type="text" autocomplete="on" required autofocus /></label>
             <br/>
-            <label>passwd<br/><input name="password" type="password" autocomplete="off" required /></label>
+            <label>pw<br/><input name="password" type="password" autocomplete="off" required /></label>
+        </p>
+        <p>
+            <input type="submit" value="조회" onclick="sendForm(this)"/>
         </p>
     </div>
   </form>

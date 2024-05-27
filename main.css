@@ -28,7 +28,7 @@ headbar {
     text-align: left;
     color: white;
     position: absolute;
-    margin-top: 18px;
+    margin-top: 15px;
 }
 
 .head-logo {
@@ -36,6 +36,7 @@ headbar {
     position: relative;
     background-color: #D6D0E4;
     box-shadow: 0px 3.5px 5px #BCB1D3;
+    font-size: large;
 }
 
 body{
@@ -75,4 +76,13 @@ input{
     text-align: center;
     border: 0px;
     border-radius: 5px;
+}
+
+.user-prof > img.propic {
+    margin-left: 0.6cm;
+    margin-top: 0.6cm;
+    height: 4cm;
+    width: 4cm;
+    border-radius: 18em;
+    box-shadow: .5px .5px 5px 3px #BCB1D3;
 }
