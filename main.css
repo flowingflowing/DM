@@ -42,7 +42,7 @@ headbar {
 body{
     background-color: #D6D0E4;
     margin: 0;
-    max-width: 600px;
+    max-width: 550px;
 }
 
 .flex-cont-row{
@@ -50,14 +50,14 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 600px;
+    max-width: 550px;
 }
 .flex-cont-col{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 600px;
+    max-width: 550px;
 }
 .input_content{
     width: 280px;
@@ -78,11 +78,34 @@ input{
     border-radius: 5px;
 }
 
+.user-prof {
+    margin: auto;
+}
+
 .user-prof > img.propic {
-    margin-left: 0.6cm;
-    margin-top: 0.6cm;
-    height: 4cm;
-    width: 4cm;
+    margin: 0.6cm;
+    height: auto;
+    width: 40%;
+    max-width: 250px;
     border-radius: 18em;
     box-shadow: .5px .5px 5px 3px #BCB1D3;
 }
+.user-prof .nameborder{
+    margin: auto;
+    margin-top: -40%;
+    margin-left: 50%;
+    width: fit-content;
+    border-bottom: 4px solid transparent;
+    border-radius: 50%;
+    border-image: linear-gradient(to right, #836DAE 0%, #BCB1D3 68%, #D6D0E4 110%);
+    border-image-slice: 1;
+}
+.user-prof .nameborder .username {
+    color: #40335B;
+    font-size: x-large;
+    font-family: "Rix이누아리두리", sans-serif;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 3px solid transparent;
+  }
+  
