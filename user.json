@@ -1,0 +1,31 @@
+[
+    {
+        "id":"studentDoingAssn",
+        "name":"과제하는공대생",
+        "age":"24세",
+        "position":"TM",
+        "height":"188cm",
+        "trait":[{"f1":"고양이상" ,"f2":"여우상", "f3":null},
+                 {"s1":"흰 피부", "s2":"예쁜 손", "s3":"외향적", "s4":null, "s5":null},
+                 {"a1":"스위치", "a2":null, "a3":null, "a4":null, "a5":null}
+                ],
+        "pic":2,
+        "wish":[{"f1":"토끼상" ,"f2":"늑대상", "f3":null},
+                {"s1":"다정한 성격", "s2":null, "s3":null, "s4":null, "s5":null},
+                {"a1":"20대", "a2":"170cm 이상"}
+               ],
+        "say":"교수님 열받게하지마세요"
+    },
+    {
+        "id":"leaveFuckingComp",
+        "name":"퇴사하고싶다",
+        "age":"29세",
+        "position":"T",
+        "height":"185cm",
+        "trait":[{"f1":"고양이상" ,"f2":"여우상", "f3":null},
+                 {"s1":"흰 피부", "s2":"예쁜 손", "s3":"외향적", "s4":null, "s5":null},
+                 {"a1":"흰 피부", "a2":"예쁜 손", "a3":"외향적", "a4":null, "a5":null}
+                ],
+        "pic":2
+    }
+]

@@ -14,33 +14,160 @@
   <div class = "user-prof">
     <img id="over1" class="propic" src="./propic/p1.png" alt="profile_picture"/>
     <div class="nameborder">
-      <div class="username">야근하는개발자</div>
+      <div class="username" id="name">NAME</div>
     </div>
     <div class="bio">
-      정보1<br>정보2<br>정보3
+      age<br>position<br>height
     </div>  
     <div class="appear">
-      <sb>절대 갇혀있는 게 아닙니다 하하</sb>
+      <sb id="saying"></sb>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <div style="max-width: 500px; display: flex; align-items: center;">
+    <p id="btnL" style=" cursor: pointer;">채팅 보내기</p>
+    <p id="btnR">
+      &#9829;
+      Like
+    </p>
+  </div>
   <div class="menubar">
     <button class="mButton0" id="proBtn" type="button" onclick="changeByPro()">프로필</button>
     <button id="ideBtn" type="button" onclick="changeByIde()">이상형</button>
   </div>
+  <div style="background-color: F0EEF6;">
+    <p class="q" id="q1">
+      저는 이런 상이에요
+    </p>
+    <div style="display: flex; margin-left: 20px; flex-wrap: wrap;">
+      <p class="listBox0" id="f1"></p>
+      <p class="listBox1" id="f2"></p>
+      <p class="listBox0" id="f3"></p>
+    </div>
+    <p class="q" id="q2">
+      저는 이런 스타일이에요
+    </p>
+    <div style="display: flex; margin-left: 20px; flex-wrap: wrap;">
+      <p class="listBox1" id="s1"></p>
+      <p class="listBox0" id="s2"></p>
+      <p class="listBox1" id="s3"></p>
+      <p class="listBox0" id="s4"></p>
+      <p class="listBox1" id="s5"></p>
+    </div>
+    <p class="q" id="q3">
+      저는 이런 성향이 있어요
+    </p>
+    <div style="display: flex; margin-left: 20px; flex-wrap: wrap;">
+      <p class="listBox0" id="a1"></p>
+      <p class="listBox1" id="a2"></p>
+      <p class="listBox0" id="a3"></p>
+      <p class="listBox1" id="a4"></p>
+      <p class="listBox0" id="a5"></p>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <script>
     $( document ).ready( function() {
       $( '#proBtn' ).click( function() {
         $('#proBtn').addClass('mButton0');
         $('#ideBtn').removeClass('mButton0');
+        $('#q1').text('저는 이런 상이에요');
+        $('#q2').text('저는 이런 스타일이에요');
+        $('#q3').text('저는 이런 성향이 있어요');
       } );
     } );
     $( document ).ready( function() {
       $( '#ideBtn' ).click( function() {
         $('#ideBtn').addClass('mButton0');
         $('#proBtn').removeClass('mButton0');
+        $('#q1').text('저는 이런 상이 좋아요');
+        $('#q2').text('저는 이런 스타일이 좋아요');
+        $('#q3').text('저는 이런 상대방을 선호해요');
       } );
     } );
   </script>
+  
+  <p id="demo"></p>
+
+  <script type="text/javascript">
+
+  let xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function () {
+    if(xhttp.readyState == 4 && xhttp.status == 200){
+      jsonfunc(this.responseText);
+    }
+  }
+  xhttp.open("GET","user.json", true);
+  xhttp.send();
+
+  function jsonfunc( jsonText ) {
+
+    let json = JSON.parse(jsonText);
+
+    let user = json.find(function(object){
+      return object.id === "studentDoingAssn";
+    });
+
+    $(document).ready(function() {
+      $('#name').html(user.name);
+      $('.bio').html(user.age+"<br>"+user.position+"<br>"+user.height);
+      $('#f1').html(user.trait[0].f1);
+      $('#f2').html(user.trait[0].f2);
+      $('#f3').html(user.trait[0].f3);
+      $('#s1').html(user.trait[1].s1);
+      $('#s2').html(user.trait[1].s2);
+      $('#s3').html(user.trait[1].s3);
+      $('#s4').html(user.trait[1].s4);
+      $('#s5').html(user.trait[1].s5);
+      $('#a1').html(user.trait[2].a1);      
+      $('#a2').html(user.trait[2].a2);
+      $('#a3').html(user.trait[2].a3);
+      $('#a4').html(user.trait[2].a4);
+      $('#a5').html(user.trait[2].a5);
+      $('#saying').text(user.say);
+      $('#over1').attr("src", "./propic/p"+user.pic+".png");
+    });
+
+    $( document ).ready( function() {
+      $( '#proBtn' ).click( function() {
+        $('#f1').html(user.trait[0].f1);
+        $('#f2').html(user.trait[0].f2);
+        $('#f3').html(user.trait[0].f3);
+        $('#s1').html(user.trait[1].s1);
+        $('#s2').html(user.trait[1].s2);
+        $('#s3').html(user.trait[1].s3);
+        $('#s4').html(user.trait[1].s4);
+        $('#s5').html(user.trait[1].s5);
+        $('#a1').html(user.trait[2].a1);      
+        $('#a2').html(user.trait[2].a2);
+        $('#a3').html(user.trait[2].a3);
+        $('#a4').html(user.trait[2].a4);
+        $('#a5').html(user.trait[2].a5);
+      } );
+    } );
+    $( document ).ready( function() {
+      $( '#ideBtn' ).click( function() {
+        $('#f1').html(user.wish[0].f1);
+        $('#f2').html(user.wish[0].f2);
+        $('#f3').html(user.wish[0].f3);
+        $('#s1').html(user.wish[1].s1);
+        $('#s2').html(user.wish[1].s2);
+        $('#s3').html(user.wish[1].s3);
+        $('#s4').html(user.wish[1].s4);
+        $('#s5').html(user.wish[1].s5);
+        $('#a1').html(user.wish[2].a1);      
+        $('#a2').html(user.wish[2].a2);
+        $('#a3').css("visibility", "hidden");
+        $('#a4').css("visibility", "hidden");
+        $('#a5').css("visibility", "hidden");
+      } );
+    } );
+  
+  }
+  </script>
+
 </body>
 </html>
