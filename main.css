@@ -101,6 +101,8 @@ input{
     max-width: 250px;
     border-radius: 18em;
     box-shadow: .5px .5px 5px 3px #BCB1D3;
+    position: relative;
+    z-index: 5;
 }
 .user-prof .nameborder{
     margin: auto;
@@ -129,16 +131,19 @@ input{
     font-weight: 400;
     color: #40335B;
     font-family: "NanumBarunGothic", sans-serif;
+    height: max-content;
 }
 sb {
 	position: relative;
 	max-width: 30em;
 	
 	background-color: #fffa;
-	padding: 1.125em 1.5em;
+	padding: 1.125em 1em;
+    font-family: 'NanumBarunGothic';
 	font-size: 1em;
 	border-radius: 1rem;
     box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+    z-index: 6;
 }
 
 sb::before {
@@ -155,7 +160,36 @@ sb::before {
 }
 
 .appear{
-    display: none;
+    visibility: hidden;
     margin-left: 10%;
 }
-#over1:active ~ .appear { display: block; } 
+#over1:active ~ .appear { 
+    visibility: visible;
+} 
+
+.mButton0{
+    color: #7F69AB;
+    border-bottom: 3px solid transparent;
+    border-bottom-color: #7F69AB;
+    box-shadow: 0px 3px 3px -2px #7F69AB;
+}
+button{
+    text-align: center;
+    width: 49%;
+    height: 1.5cm;
+    font-family: 'bitbit';
+    font-size: 130%;
+    border: 0;
+    background-color: #F0EEF6;
+    color: #D6D0E4;
+    border-bottom: 3px solid transparent;
+    border-bottom-color: #D6D0E4;
+    box-shadow: 0px 3px 3px -2px #D6D0E4;
+}
+.menubar{
+    position: static;
+    display: block;
+    background-color: #f0eef6;
+    height: 1.5cm;
+    margin-top: 23%;
+}
