@@ -197,7 +197,6 @@ button{
 
 #btnL{
     position: relative;
-    margin-top: 65px;
     margin-left: calc(3%);
     width: calc(55%);
     max-width: 275px;
@@ -218,7 +217,6 @@ button{
 }
 #btnR{
     position: relative;
-    margin-top: 65px;
     margin-left: calc(3%);
     margin-right: calc(3%);
     width: 25%;
