@@ -54,22 +54,7 @@ headbar {
 body{
     background-color: #D6D0E4;
     margin: 0;
-    max-width: 500px;
-}
-
-.flex-cont-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 500px;
-}
-.flex-cont-col{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 500px;
+    max-width: 450px;
 }
 .input_content{
     width: 280px;
@@ -98,7 +83,7 @@ input{
     margin: 0.6cm;
     height: auto;
     width: 40%;
-    max-width: 220px;
+    max-width: 180px;
     border-radius: 18em;
     box-shadow: .5px .5px 5px 3px #BCB1D3;
     position: relative;
