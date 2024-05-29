@@ -1275,7 +1275,7 @@
         "say":""
     },
     {
-        "id":"구름1",
+        "id":"cld1",
         "name":"구름1",
         "age":"29세",
         "position":"T",
@@ -1292,8 +1292,8 @@
         "say":""
     },
     {
-        "id":"",
-        "name":"work",
+        "id":"work",
+        "name":"퇴근",
         "age":"32세",
         "position":"T",
         "height":"190cm",
